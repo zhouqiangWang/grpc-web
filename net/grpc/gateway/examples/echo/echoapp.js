@@ -79,8 +79,9 @@ echoapp.EchoApp.prototype.echo = function(msg) {
   });
   call.on('status', function(status) {
     self.handlers.checkGrpcStatusCode(status);
+    console.log("runing on 9090");
     if (status.metadata) {
-      console.log("Received metadata");
+      console.log("Received metadata in echo");
       console.log(status.metadata);
     }
   });
@@ -124,8 +125,9 @@ echoapp.EchoApp.prototype.repeatEcho = function(msg, count) {
   });
   stream.on('status', function(status) {
     self.handlers.checkGrpcStatusCode(status);
+    console.log("runing on 9090");
     if (status.metadata) {
-      console.log("Received metadata");
+      console.log("Received metadata in repeatEcho");
       console.log(status.metadata);
     }
   });
