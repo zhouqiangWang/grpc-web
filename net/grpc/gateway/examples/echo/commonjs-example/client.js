@@ -23,6 +23,8 @@ const {EchoApp} = require('../echoapp.js');
 const grpc = {};
 grpc.web = require('grpc-web');
 
+console.log("setup grpc client on 9090")
+
 var echoService = new EchoServiceClient('http://'+window.location.hostname+':9090', null, null);
 
 var echoApp = new EchoApp(
