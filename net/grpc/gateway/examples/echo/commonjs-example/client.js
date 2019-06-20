@@ -23,9 +23,9 @@ const {EchoApp} = require('../echoapp.js');
 const grpc = {};
 grpc.web = require('grpc-web');
 
-console.log("setup grpc client on 9090")
+console.log("setup grpc client on 8090")
 
-var echoService = new EchoServiceClient('http://'+window.location.hostname+':9090', null, null);
+var echoService = new EchoServiceClient('http://'+window.location.hostname+':8090', null, null);
 
 var echoApp = new EchoApp(
   echoService,
@@ -35,7 +35,7 @@ var echoApp = new EchoApp(
   },
   {
     checkGrpcStatusCode: function(status) {
-      console.log("grpc handler callback, request should sent on 9090!");
+      console.log("grpc handler callback, request should sent on 8090!");
       if (status.code != grpc.web.StatusCode.OK) {
         EchoApp.addRightMessage('Error code: '+status.code+' "'+
                                 status.details+'"');
