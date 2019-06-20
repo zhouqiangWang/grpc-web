@@ -157,7 +157,7 @@ class EchoApp {
   }
 }
 
-const echoService = new EchoServiceClient('http://localhost:8080', null, null);
+const echoService = new EchoServiceClient('http://localhost:9090', null, null);
 
 const echoApp = new EchoApp(echoService);
 echoApp.load();
