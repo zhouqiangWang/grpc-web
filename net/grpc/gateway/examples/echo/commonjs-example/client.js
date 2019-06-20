@@ -35,6 +35,7 @@ var echoApp = new EchoApp(
   },
   {
     checkGrpcStatusCode: function(status) {
+      console.log("grpc handler callback, request should sent on 9090!");
       if (status.code != grpc.web.StatusCode.OK) {
         EchoApp.addRightMessage('Error code: '+status.code+' "'+
                                 status.details+'"');

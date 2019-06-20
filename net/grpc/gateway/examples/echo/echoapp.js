@@ -167,6 +167,7 @@ echoapp.EchoApp.prototype.send = function(e) {
  * Load the app
  */
 echoapp.EchoApp.prototype.load = function() {
+  console.log("setting up EchoApp on port 9090");
   var self = this;
   $(document).ready(function() {
     // event handlers
